@@ -1,4 +1,4 @@
-package com.eliptic.curve;
+package com.elliptic.curve;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

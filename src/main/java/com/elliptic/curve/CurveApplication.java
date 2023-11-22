@@ -1,4 +1,4 @@
-package com.eliptic.curve;
+package com.elliptic.curve;
 
 import org.bouncycastle.math.ec.ECPoint;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
