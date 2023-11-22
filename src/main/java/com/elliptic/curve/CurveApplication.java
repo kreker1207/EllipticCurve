@@ -84,16 +84,16 @@ public class CurveApplication {
 		System.out.println("isOnCurve: " + isOnCurveCheck(newPoint1));
 		System.out.println("isOnCurve: " + isOnCurveCheck(newPoint2) + "\n");
 
-		ECPoint addition = addECPoints(newPoint2, newPoint2);
+		ECPoint addition = addECPoints(newPoint2, newPoint2).normalize();
 		System.out.println("Addition of the points:");
 		printECPoint(addition);
 
-		ECPoint doublePoint = doubleECPoints(newPoint2);
+		ECPoint doublePoint = doubleECPoints(newPoint2).normalize();
 		System.out.println("Double of the point:");
 		printECPoint(doublePoint);
 
 		BigInteger scalar = BigInteger.valueOf(2);
-		ECPoint scalarMult = scalarMult(scalar, newPoint2);
+		ECPoint scalarMult = scalarMult(scalar, newPoint2).normalize();
 		System.out.println("Multiply by scalar:");
 		printECPoint(scalarMult);
 
@@ -113,6 +113,7 @@ public class CurveApplication {
 		ECPoint H2 = scalarMult(k, H1).normalize();
 		ECPoint H3 = scalarMult(k, G).normalize();
 		ECPoint H4 = scalarMult(d, H3).normalize();
+		tests();
 
 		boolean result = H2.getAffineXCoord().toBigInteger().equals(H4.getAffineXCoord().toBigInteger()) &&
 				H2.getAffineYCoord().toBigInteger().equals(H4.getAffineYCoord().toBigInteger());
