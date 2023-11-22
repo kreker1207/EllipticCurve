@@ -16,6 +16,6 @@ git clone https://github.com/kreker1207/EllipticCurve.git
 ```bash
 mvn install
 ```
-This command - compile, build and install the build result
-4. Run project via your IDE
+This command - compile, build and install the build result<br>
+4. Run project via your IDE<br>
 In this project was used Spring framework to create a dependency with library that is working with Elliptic curves
